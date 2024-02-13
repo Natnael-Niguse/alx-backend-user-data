@@ -33,3 +33,12 @@ def abort_401() -> str:
       - test unauthorized endpoint
     """
     abort(401)
+
+
+@app_views.route('/forbidden', methods=['GET'], strict_slashes=False)
+def abort_403() -> str:
+    """ GET /api/v1/unauthorized
+    Return:
+      - test unauthorized endpoint
+    """
+    abort(403)
